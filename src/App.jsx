@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import HomePage from './pages/HomePage';
-import MyArenaPage from './pages/MyArenaPage';
+import MyAvatarPage from './pages/MyAvatarPage';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<HomePage />} />
-        <Route path="/my-arena" element={<MyArenaPage />} />
+        <Route path="/my-arena" element={<MyAvatarPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>

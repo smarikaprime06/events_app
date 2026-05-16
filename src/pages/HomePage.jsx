@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import forestBg from '../assets/forest_bg.png';
+import zenBear from '../assets/zen_bear.png';
 
 const eventCards = [
   {
@@ -54,11 +55,15 @@ const HomePage = () => {
       <section className="py-20 bg-[#080B12]">
         <div className="container mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
           {/* Placeholder art card */}
-          <div className="w-full aspect-square max-w-sm mx-auto rounded-3xl bg-gradient-to-br from-[#0f1a2e] to-[#0a1020] border border-white/10 flex items-center justify-center relative overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#00D1FF22_0%,_transparent_70%)]" />
-            <span className="text-9xl select-none">🐼</span>
-            <div className="absolute bottom-4 left-4 right-4 text-center">
-              <span className="text-[#00D1FF] text-xs font-bold tracking-widest uppercase">Zen 4.0 — Your Guide</span>
+          <div className="w-full aspect-square max-w-sm mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-[#00D1FF]/10 relative group">
+            <img
+              src={zenBear}
+              alt="Zen 4.0 Cyber Bear"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E17]/80 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-0 right-0 text-center">
+              <span className="text-[#00D1FF] text-xs font-bold tracking-widest uppercase drop-shadow-lg">Zen 4.0 — Your Guide</span>
             </div>
           </div>
 
