@@ -3,6 +3,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import HomePage from './pages/HomePage';
 import MyAvatarPage from './pages/MyAvatarPage';
+import EventsPage from './pages/EventsPage';
+import ChatbotLauncher from './components/ChatbotLauncher';
 
 function App() {
   return (
@@ -11,8 +13,11 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/my-arena" element={<MyAvatarPage />} />
+        <Route path="/events/:category" element={<EventsPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      {/* ZEN 4.0 — global floating chatbot */}
+      <ChatbotLauncher />
     </div>
   );
 }

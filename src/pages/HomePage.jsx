@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import forestBg from '../assets/forest_bg.png';
 import zenBear from '../assets/zen_bear.png';
@@ -6,6 +7,7 @@ import zenBear from '../assets/zen_bear.png';
 const eventCards = [
   {
     id: 'tech-events',
+    route: '/events/tech',
     label: 'Tech Events',
     emoji: '⚡',
     gradient: 'from-[#00D1FF] to-blue-700',
@@ -13,6 +15,7 @@ const eventCards = [
   },
   {
     id: 'fun-events',
+    route: '/events/fun',
     label: 'Fun Events',
     emoji: '🎉',
     gradient: 'from-purple-500 to-pink-600',
@@ -20,6 +23,7 @@ const eventCards = [
   },
   {
     id: 'workshops',
+    route: '/events/fun',
     label: 'Workshops',
     emoji: '🛠️',
     gradient: 'from-green-400 to-teal-600',
@@ -92,10 +96,11 @@ const HomePage = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {eventCards.map((card) => (
-            <div
+            <Link
+              to={card.route}
               key={card.id}
               id={card.id}
-              className="group relative rounded-2xl overflow-hidden cursor-pointer border border-white/5 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50"
+              className="group relative rounded-2xl overflow-hidden cursor-pointer border border-white/5 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50 block"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-20 group-hover:opacity-30 transition-opacity`} />
               <div className="relative p-8 min-h-[200px] flex flex-col justify-between bg-white/5">
@@ -103,9 +108,10 @@ const HomePage = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1">{card.label}</h3>
                   <p className="text-white/40 text-sm">{card.description}</p>
+                  <p className="text-[#00D1FF] text-xs font-semibold mt-3 group-hover:underline">View Events →</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

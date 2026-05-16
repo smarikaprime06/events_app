@@ -50,8 +50,8 @@ const SignUpForm = () => {
         </div>
 
         <p className="text-xs text-white/40">
-          Already a Member Yet?{' '}
-          <a href="#" className="text-[#00D1FF] hover:underline">Sign In</a>
+          Don't have an account?{' '}
+          <a href="#" className="text-[#00D1FF] hover:underline">Sign Up</a>
         </p>
 
         <div className="flex gap-4 pt-4">
@@ -59,7 +59,7 @@ const SignUpForm = () => {
             type="submit"
             className="flex-1 py-3 bg-[#00D1FF] text-black font-bold rounded-lg hover:bg-[#00D1FF]/90 transition-all active:scale-95"
           >
-            Sign Up
+            Sign In
           </button>
           <div className="flex items-center text-white/20 px-2 font-medium">or</div>
           <button
@@ -71,7 +71,7 @@ const SignUpForm = () => {
             className="flex-[1.5] py-3 bg-white text-black font-bold rounded-lg flex items-center justify-center gap-2 hover:bg-white/90 transition-all active:scale-95 border border-black/10"
           >
             <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
-            Sign up with Google
+            Sign in with Google
           </button>
         </div>
       </form>
