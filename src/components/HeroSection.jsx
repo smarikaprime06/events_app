@@ -4,15 +4,15 @@ import forestBg from '../assets/forest_bg.png';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-height-[100vh] w-full flex items-center justify-center overflow-hidden bg-brand-dark">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#0A0E17]">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={forestBg} 
-          alt="Forest Background" 
+        <img
+          src={forestBg}
+          alt="Forest Background"
           className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0E17] via-[#0A0E17]/50 to-transparent" />
       </div>
 
       <div className="container mx-auto px-6 z-10 grid lg:grid-cols-2 gap-12 items-center py-20">
@@ -20,19 +20,23 @@ const HeroSection = () => {
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-5xl lg:text-7xl font-black text-white leading-tight">
-              Enter the untamed wilderness with <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-blue-400">ZYPHORIA</span>
+              Enter the untamed wilderness with{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D1FF] to-blue-400">
+                ZYPHORIA
+              </span>
             </h1>
-            <div className="w-24 h-1 bg-brand-cyan rounded-full"></div>
+            <div className="w-24 h-1 bg-[#00D1FF] rounded-full" />
             <p className="text-lg text-white/80 max-w-lg leading-relaxed font-light">
-              Release all your stress with the exciting Tech and Fun events in the most awaited fest. <span className="font-bold text-brand-cyan">ZYPHORIA 3.0</span> presented by Zairza.
+              Release all your stress with the exciting Tech and Fun events in the most awaited fest.{' '}
+              <span className="font-bold text-[#00D1FF]">ZYPHORIA 3.0</span> presented by Zairza.
             </p>
           </div>
-          
+
           <div className="flex gap-6 items-center">
             <div className="flex -space-x-4">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="w-12 h-12 rounded-full border-2 border-brand-dark bg-gray-800 flex items-center justify-center overflow-hidden">
-                  <div className={`w-full h-full bg-gradient-to-br from-brand-cyan to-blue-500 opacity-80`}></div>
+                <div key={i} className="w-12 h-12 rounded-full border-2 border-[#0A0E17] bg-gray-800 overflow-hidden">
+                  <div className="w-full h-full bg-gradient-to-br from-[#00D1FF] to-blue-500 opacity-80" />
                 </div>
               ))}
             </div>
@@ -47,12 +51,12 @@ const HeroSection = () => {
           <SignUpForm />
         </div>
       </div>
-      
+
       {/* Decorative bioluminescent dots */}
       <div className="absolute bottom-10 left-10 flex gap-4">
-        <div className="w-4 h-4 rounded-full bg-white animate-pulse shadow-[0_0_15px_rgba(255,255,255,0.8)]"></div>
-        <div className="w-4 h-4 rounded-full bg-brand-cyan animate-pulse delay-75 shadow-[0_0_15px_rgba(0,209,255,0.8)]"></div>
-        <div className="w-4 h-4 rounded-full bg-green-400 animate-pulse delay-150 shadow-[0_0_15px_rgba(74,222,128,0.8)]"></div>
+        <div className="w-4 h-4 rounded-full bg-white animate-pulse shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
+        <div className="w-4 h-4 rounded-full bg-[#00D1FF] animate-pulse shadow-[0_0_15px_rgba(0,209,255,0.8)]" style={{ animationDelay: '150ms' }} />
+        <div className="w-4 h-4 rounded-full bg-green-400 animate-pulse shadow-[0_0_15px_rgba(74,222,128,0.8)]" style={{ animationDelay: '300ms' }} />
       </div>
     </section>
   );
